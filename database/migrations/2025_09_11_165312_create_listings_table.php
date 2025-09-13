@@ -22,8 +22,8 @@ return new class extends Migration
             $table->unsignedSmallInteger('max_person')->default(0);
             $table->unsignedSmallInteger('price_per_day')->default(0);
             $table->longText('attachments')->nullable();
-            $table->unsignedSmallInteger('full-support_available')->default(0);
-            $table->unsignedSmallInteger('gym-area_available')->default(0);
+            $table->unsignedSmallInteger('full_support_available')->default(0);
+            $table->unsignedSmallInteger('gym_area_available')->default(0);
             $table->unsignedSmallInteger('mini_cafe_available')->default(0);
             $table->unsignedSmallInteger('cinema_available')->default(0);
             $table->timestamps();
