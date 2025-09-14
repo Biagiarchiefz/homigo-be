@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -59,7 +60,11 @@ class Listing extends Model
         $this->attributes['slug'] = Str::slug($value);
     }
 
-
-
+    // hasMany artinya = memiliki banyak
+    // listing memiliki beberapa transaksi
+    // hasMany apa? // cara baca 1 listing memliki banyak transaction
+    public function transactions(): HasMany {
+        return $this->hasMany(Transaction::class);
+    }
 
 }
