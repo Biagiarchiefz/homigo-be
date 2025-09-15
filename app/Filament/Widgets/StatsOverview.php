@@ -49,7 +49,7 @@ class StatsOverview extends BaseWidget
                 ->descriptionIcon($transactionPercentange > 0 ? "heroicon-m-arrow-trending-up" : "heroicon-m-trending-down")
                 ->color($transactionPercentange > 0 ? "success" : "danger"),
             Stat::make('Revenue of the month', Number::currency($transactions->sum('total_price'), 'USD'))
-                ->description($revenuePercentange > 0 ? "${revenuePercentange}% increased" : "${revenuePercentange}% decreased")
+                ->description($revenuePercentange > 0 ? "{$revenuePercentange}% increased" : "{$revenuePercentange}% decreased")
                 ->descriptionIcon($revenuePercentange > 0 ? "heroicon-m-arrow-trending-up" : "heroicon-m-trending-down")
                 ->color($revenuePercentange > 0 ? "success" : "danger"),
 
