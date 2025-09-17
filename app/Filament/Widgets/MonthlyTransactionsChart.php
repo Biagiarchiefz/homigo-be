@@ -23,7 +23,7 @@ class MonthlyTransactionsChart extends ChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => 'Transactions cretaed',
+                    'label' => 'Transactions created',
                     'data' => $data->map(fn (TrendValue $value) => $value->aggregate),
                 ],
             ],

@@ -75,6 +75,8 @@ class TransactionResource extends Resource
                 Action::make('approve')
                     ->button()
                     ->color('success')
+                    ->requiresConfirmation()
+                    ->modalIcon('heroicon-o-information-circle')
                 ->action(function(Transaction $transaction){
                     Transaction::find($transaction->id)->update(['status' => 'approved']);
                     Notification::make()->success()->title('Transaction Approved!')->body('Your transaction has been successfully approved.')->icon('heroicon-o-check')->send();
