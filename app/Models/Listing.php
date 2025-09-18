@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
 
-class Listing extends Model
-{
+class Listing extends Model {
     use HasFactory, softDeletes;
 
 //    $fillable adalah daftar kolom yang boleh diisi sekaligus ketika kita membuat atau menupdate data lewat method seperti Model::create([...])
